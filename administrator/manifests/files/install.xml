@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" version="1.7.0">
+    <name>es-ES.com_phocagallery</name> 
+   	<version>3.0.0 beta</version>
+    <creationDate>01/03/2014</creationDate> 
+    <author>Ibai Fernandez</author> 
+	<authorEmail>ibaifer@gmail.com</authorEmail>
+	<authorUrl>htt://www.mintmarking.com</authorUrl>
+	<copyright>© 2007 - 2013 Jan Pavelka</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license> 
+    <description>Spanish language pack for Phoca Gallery 3.0</description> 
+	<fileset>
+		<files target="language/es-ES">
+		    <filename>index.html</filename>
+			<filename>es-ES.com_phocagallery.ini</filename>
+			<filename>es-ES.com_phocagallery.sys.ini</filename>
+		</files>
+		<files target="administrator/language/es-ES">
+		    <filename>index.html</filename>
+			<filename>es-ES.com_phocagallery.ini</filename>
+			<filename>es-ES.com_phocagallery.sys.ini</filename>
+		</files>	
+	</fileset>
+	
+</extension>

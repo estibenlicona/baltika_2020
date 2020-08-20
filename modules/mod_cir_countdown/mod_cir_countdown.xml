@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>Responsive Circular Countdown</name>
+  <author>Ahsan Ahmed Shovon for JoomlaKave.com</author>
+  <creationDate>09-04-2015</creationDate>
+  <copyright>Copyright (C)2015 JoomlaKave.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@JoomlaKave.com</authorEmail>
+  <authorUrl>www.JoomlaKave.com</authorUrl>
+  <version>1.5</version>
+  <description>Circular Countdown From Joomlakave.com</description>
+  
+  <files>
+    <filename module="mod_cir_countdown">mod_cir_countdown.php</filename>
+    <folder>tmpl/</folder>
+    <folder>assets/</folder>
+    <filename>index.html</filename>
+  </files>
+
+      <updateservers>
+        <server type="extension" priority="2" name="Responsive Circular Countdown">http://joomlakave.com/updates_ex/modules/mod_cir_countdown/mod_cir_countdown_update.xml</server>
+    </updateservers>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+
+        <field type="spacer" name="&lt;div style=&quot;Color:green;&quot;&gt;&lt;b&gt;Give the time and date on this format ( 2015,12,31,'18:00' )&lt;/b&gt;&lt;/div&gt;" />
+
+            <field name="cdowntime" type="text" default="2017,04,10,'18:00'" label="Your time to countdown" description="Give the time and date on this format ( 2015,04,10,'18:00' )"/>
+
+          <field name="backcolor" type="color" default="#000000" label="Background color" description="Background color here" />
+          
+          <field name="ourevent" type="text" default="" label="Heading text" description="heading here" />
+
+          <field name="talign" type="radio" class="btn-group" default="center" label="Select text align" description="Text align fix here">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+          </field>
+
+          <field name="htsize" type="text" default="30" label="Heading text size in px" description="Heading text will appear just above the countdown" />
+
+          <field name="headcolor" type="color" default="#f0a911" label="Heading text color" description="Use color picker to choose color" />
+
+           
+        <field name="secshow" type="radio" default="1" class="btn-group" label="Second show" description="Clock style">
+          <option value="0">JNo</option>
+          <option value="1">JYes</option>
+        </field>
+
+        
+
+      </fieldset>
+
+        <fieldset name="clock_1" label="Clock Style 1">
+
+          <field name="cirthickness" type="groupedlist" default=".08" label="Circle thickness" description="Zoom background position">
+                            <option value=".01">1</option>
+                            <option value=".02">2</option>
+                            <option value=".05">3</option>
+                            <option value=".08">4</option>
+                            <option value=".11">5</option>
+                            <option value=".14">6</option>
+                            <option value=".17">7</option>
+                            <option value=".2">8</option>
+                            
+            </field>
+
+            <field name="daycolor" type="color" default="#f2a918" label="Day Color" description="Change day color here"/>
+
+            <field name="hourcolor" type="color" default="#e02878" label="Hour Color" description="Change hour color here"/>
+
+            <field name="mincolor" type="color" default="#0bcf5c" label="Minute Color" description="Change minute color here"/>
+
+            <field name="seccolor" type="color" default="#ff8052" label="Second Color" description="Change second color here"/>
+
+        </fieldset>
+
+    </fields>
+  </config>
+</extension>

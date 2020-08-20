@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Single Gallery Layout">
+		<message>
+			Single Gallery Layout
+		</message>
+	</layout>
+	<state>
+		<name>Single Gallery Layout</name>
+		<description>Single Gallery Layout</description>
+	</state>
+	<fields name="params">
+		<fieldset name="basic">
+            <field name="id" type="sql" query="SELECT id, name FROM #__fwg_projects WHERE published=1 ORDER BY ordering" label="Select Gallery" description="A gallery to display" key_field="id" value_field="name" />
+			<field name="display_gallery_sorting" type="radio" label="FWG_DISPLAY_ORDER_BY_OPTION" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_total_galleries" type="radio" label="FWG_DISPLAY_TOTAL_GALLERIES_COUNTER" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_name_gallery" type="radio" label="FWG_DISPLAY_GALLERY_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_descr_gallery" type="radio" label="FWG_DISPLAY_GALLERY_DESCR" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_owner_gallery" type="radio" label="FWG_DISPLAY_GALLERY_OWNER_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_date_gallery" type="radio" label="FWG_DISPLAY_GALLERY_DATE" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_name_image" type="radio" label="FWG_DISPLAY_IMAGE_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_owner_image" type="radio" label="FWG_DISPLAY_IMAGE_OWNER_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="galleries_a_row" type="list" label="FWG_GALLERIES_IN_A_ROW" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+			<field name="images_a_row" type="list" label="FWG_IMAGES_IN_A_ROW" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+			<field name="images_rows" type="list" label="FWG_IMAGES_ROWS_PER_PAGE" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

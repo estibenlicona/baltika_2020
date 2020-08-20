@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+    <name>LT Soccer</name>
+    <description>LT Soccer Joomla! template - &lt;a target='_blank' href='https://ltheme.com/free-joomla-template-documentation/'&gt;See Template Document&lt;/a&gt; | &lt;a target='_blank' href='https://ltheme.com/project/lt-soccer-free-responsive-joomla-soccer-theme/'&gt;Get PRO license&lt;/a&gt; to access &lt;a target='_blank' href='http://demo5.ltheme.com/joomla/lt-soccer/'&gt;Full version as LIVE DEMO&lt;/a&gt;</description>
+    <scriptfile>installer.script.php</scriptfile>
+    <files>
+		    <filename plugin="tmp_helix3">installer.script.php</filename>
+    </files>
+    <plugins>
+        <plugin plugin="helix3" group="ajax" />
+        <plugin plugin="helix3" group="system" />
+    </plugins>
+</extension>

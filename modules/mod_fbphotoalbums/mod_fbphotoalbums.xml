@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+<name>Facebook Photo Albums</name>
+<creationDate>March 2015</creationDate>
+<version>2.0.0</version>
+<author>GraphicAholic</author>
+<copyright>Copyright 2015-2017 - graphicaholic.com</copyright>
+<license>http://www.gnu.org/copyleft/lgpl.html</license>
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>
+	<description>Facebook Photo Album module for Joomla 3.x</description>
+	<files>
+		<filename module="mod_fbphotoalbums">mod_fbphotoalbums.php</filename>
+        <folder>js</folder>
+        <folder>css</folder>
+        <folder>images</folder>
+		<filename>index.html</filename>
+		<filename>mod_fbphotoalbums.xml</filename>
+	</files>
+		<updateservers>
+		<server type="extension" priority="1" name="CountdownAholic Update">http://www.graphicaholic.com/downloads/FacebookPhotoAlbums/facebookphotoalbums.xml</server>
+	</updateservers>
+	<config> 
+	<fields name="params" addfieldpath="/modules/mod_galleryaholic/fields">	
+	<!-- General Settings -->
+	<fieldset name="general" group="general" label="General Settings">
+	<field name="facebookPage" type="text" default="" label="Facebook Account Name" description="Do not enter the entire URL, just the Facebook account name as it appears." />
+	<field name="accessToken" type="list" default="775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4" label="Select an Access Token" description="Select an Access Token to use from this dropdown. As Facebook continues to change/restrict their API some or all of these Access Tokens will stop working. If you have tried all of these selections and none work, this extension has reached it's End of Life cycle!">	
+		<option value="775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4">775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4</option>	
+		<option value="798893756945801|M2sps88WPRAtTxMdqneOYnoLBgg">798893756945801|M2sps88WPRAtTxMdqneOYnoLBgg</option>	
+		<option value="275650419164017|FwQ_vU-Vs_cSmUvrbY2uwe-iTn8">275650419164017|FwQ_vU-Vs_cSmUvrbY2uwe-iTn8</option>	
+		<option value="775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4">775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4</option>	
+		<option value="1100238516749015|emuSdFoMdJ3T2LITJnCTmInnpSA">1100238516749015|emuSdFoMdJ3T2LITJnCTmInnpSA</option>	
+		<option value="662736597261834|brdrs3-3A4-mjZz99Vb-ait76QA">662736597261834|brdrs3-3A4-mjZz99Vb-ait76QA</option>	
+		<option value="132507796808786|NXQlOduWufjQvTBkrTXUAwupFFM">132507796808786|NXQlOduWufjQvTBkrTXUAwupFFM</option>	
+	</field>	
+	<field name="note20" type="note" class="alert alert-error" label="Please note:" description="If you are upgrading from an older version, the next two options have changed and you will need to reset the default values to your specific needs. Make sure NOT to include PX after your values." />
+	<field name="tmbWidth_" type="text" default="130" label="Thumbnail width" description="DO NOT INCLUDE PX AFTER VALUE!" />
+	<field name="tmbHeight_" type="text" default="130" label="Thumbnail height" description="DO NOT INCLUDE PX AFTER VALUE!" />
+	<field name="note21" type="note" class="alert alert-error" label="Skip Album Formatting Tip:" description="If you wish not to show an album&#44; use this format&#58; &#34;FB Album Name One&#34;&#44; &#34;FB Album Name Two&#34;&#44; &#34;FB Album Name Three&#34; &#40;Do not include a &#39;comer&#39; at the end of the last Skip Album listing.&#41;" />
+	<field name="skipAlbums" type="textarea" filter="raw" cols="35" rows="4" default="" label="List albums to skip" description="" />
+	<field name="skipemptyAlbums" type="list" class="btn-group" default="true" label="Skip Empty Albums" description="Skip Empty Albums">
+			<option value="false">JNO</option>
+			<option value="true">JYES</option>
+	</field>
+	<field name="showAccountInfo" type="list" class="btn-group" default="true" label="Show Account Info?" description="Show Facebook Account Info? ">	
+			<option value="false">JNO</option>	
+			<option value="true">JYES</option>
+	</field>
+	<field name="showImageCount" type="list" class="btn-group" default="true" label="Show Image Count?" description="Show Image Count? ">	
+			<option value="false">JNO</option>	
+			<option value="true">JYES</option>
+	</field>
+	<field name="albumsToShow" type="text" default="0" label="No. of Albums on pageload" description="Enter number value. 0=Show All" />
+	<field name="albumsToShowText" type="text" filter="raw" default="Show more..." label="Button text for albums" description="Enter text for the Albums 'Show more' button. This button will not show if above option is set to zero" />
+	<field name="photosToShow" type="text" default="0" label="No. of Photos on pageload" description="Enter number value. 0=Show All" />
+	<field name="photosToShowText" type="text" filter="raw" default="Show more..." label="Button text for photos" description="Enter text for the Photos 'Show more' button. This button will not show if above option is set to zero" />
+	<field name="showAlbumNameInPreview" type="list" class="btn-group" default="true" label="Show album name in gallery?" description="Show album name in gallery? ">
+			<option value="false">JNO</option>
+			<option value="true">JYES</option>
+	</field>
+	<field name="photoCheck" type="list" default="false" label="Use Photo Checked Option?" description="Use Photo Checked Option">
+			<option value="false">JNO</option>
+			<option value="true">JYES</option>
+	</field>
+	<field name="useLightbox" type="list" class="btn-group" default="true" label="Use Lightbox on photo click?" description="Use Lightbox when clicking onto a photo? ">	
+			<option value="false">JNO</option>	
+			<option value="true">JYES</option>
+	</field>
+	<field name="showImageText" showon="useLightbox:true" type="list" class="btn-group" default="true" label="Show description in lightbox" description="Show description in lightbox? ">
+			<option value="false">JNO</option>
+			<option value="true">JYES</option>
+	</field>
+	<field name="showComments" showon="useLightbox:true" type="list" class="btn-group" default="true" label="Show comments in lightbox?" description="Show comments in lightbox? ">
+			<option value="false">JNO</option>
+			<option value="true">JYES</option>
+	</field>
+	<field name="commentsLimit" showon="useLightbox:true" type="text" default="5" label="No. of comments to show?" description="Number of comments to show?" />
+	<field name="uselikeButton" showon="useLightbox:true" type="list" class="btn-group" default="true" label="Social buttons in lightbox?" description="Show social buttons in lightbox? ">
+			<option value="false">JNO</option>
+			<option value="true">JYES</option>
+	</field>
+	<field name="lightboxBackground" showon="useLightbox:true" type="truecolors" default="" format="rgb" opacity="1.0" label="Lightbox background color" description="Adjust to your needs" />
+	<field name="hoverEffect" type="list" default="true" label="Use album hover effect" description="Use album hover effect?">
+			<option value="false">JNO</option>
+			<option value="true">JYES</option>
+	</field>
+	<field name="titleSize" default="12px" label="Album title font size" description="Adjust to your needs." />
+	<field name="titleColor" type="truecolors" default="" format="rgb" opacity="1.0" label="Album title color" description="Adjust to your needs" />
+	<field name="titleWeight" default="400" label="Album title font weight" description="Adjust to your needs. Adjust using 100, 200, 300, 400, 500, 600, 700, 800, 900 - Higher value equals bolder font weight." />
+	<field name="styleColor" type="truecolors" default="" format="rgb" opacity="1.0" label="Style color" description="Style color" />
+	</fieldset>
+	<!-- Advanced Settings -->
+	<fieldset name="advanced" group="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+				<field name="cache" type="radio" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+				<field name="documentation" type="docs" default="900" label="" description="" />
+	</fieldset>
+</fields>
+</config>
+</extension>

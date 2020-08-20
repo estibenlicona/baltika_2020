@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>Smart Countdown 3</name>
+	<author>Alex Polonski</author>
+	<creationDate>2012-2015</creationDate>
+	<copyright>(C) 2012 - 2015 - Alex Polonski. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>alex3493@yandex.ru</authorEmail>
+	<authorUrl>http://smartcalc.es</authorUrl>
+	<packagename>smartcountdown3</packagename>
+	<version>3.4.7</version>
+	<description>Smart Countdown 3 Component and plugin</description>
+	<files folder="packages">
+        <file type="component" id="com_smartcountdown3">com_smartcountdown3.zip</file>
+        <file type="module" id="mod_smartcountdown3" client="site">mod_smartcountdown3.zip</file>
+	</files>
+</extension>
+

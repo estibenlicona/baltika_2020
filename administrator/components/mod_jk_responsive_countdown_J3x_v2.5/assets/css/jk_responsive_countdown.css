@@ -1,0 +1,28 @@
+.jk_countdown {display:block;text-align:center;border:1px solid #cccccc;border-radius:10px;box-shadow:1px 1px 3px #666666;padding:10px 0;margin:10px 0;}
+.jk_countdown_pre_text {padding:0 10px;}
+.jk_countdown_cntdwn {}
+.jk_countdown_post_text{padding:0 10px 10px;}
+.jk_countdown_button {}
+
+.jk_countdown_days, .jk_countdown_hours, .jk_countdown_mins, .jk_countdown_secs{
+display:inline-block;min-width:40px;min-height:40px;margin:10px 3px;font-size:30px;color:#fff;
+text-align:center;border-radius:10px;padding:10px}
+
+.jk_countdown_days {;}
+.jk_countdown_int {padding-bottom:10px;}
+.jk_countdown_string {padding-bottom:10px;}
+.jk_countdown_days .jk_countdown_int {}
+.jk_countdown_days .jk_countdown_string {}
+.jk_countdown_hours {;}
+.jk_countdown_hours .jk_countdown_int {}
+.jk_countdown_hours .jk_countdown_string {}
+.jk_countdown_mins {;}
+.jk_countdown_mins .jk_countdown_int {}
+.jk_countdown_mins .jk_countdown_string {}
+.jk_countdown_secs {;}
+.jk_countdown_secs .jk_countdown_int {}
+.jk_countdown_secs .jk_countdown_string {}
+.jk_countdown_container {display:block}
+
+.jk_countdown_button{}
+.jk_countdown_button a.button {font-weight:bold;}

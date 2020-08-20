@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+    <name>Content - edbbee</name>
+	<author>dbBee</author>
+	<creationDate>January 2017</creationDate>
+	<copyright>Copyright (C) 2017 dbBee. All rights reserved.</copyright>
+	<license>GPL</license>
+	<authorEmail>support@dbbee.com</authorEmail>
+	<authorUrl>www.dbbee.com</authorUrl>
+	<version>1.2</version>
+	<description> <![CDATA[
+	<div style="float:left;margin-bottom:5px;"> 
+	<img src="//www.dbbee.com/images/jomla-banner-772x250.png"></div><div style="clear:both;"></div>
+	<div style="float: left; width: 772px; margin-top: -70px; margin-left: 25px;">
+		<img src="//www.dbbee.com/images/icon-128x128.png" style="float:left;margin-right:5px;"><p style="float: left; width: 506px; font-family: Georgia,'Bitstream Vera Serif','Times New Roman',serif; font-size: 16px; margin-top: 92px; margin-left: 20px;">Turn your Excel Spreadsheet, or Access database into a powerful online database application with a few clicks!</p>
+		<div style="height: 80px; font-family: 'Open Sans',sans-serif;font-size:13px; float: left; width: 730px; margin-top: 15px;">
+			
+			<p style="font-family: 'Open Sans',sans-serif;font-size:13px;">For more info on dbBee please visit <a href="http://www.dbbee.com/" target="_blank">dbBee Service</a> | <a href="https://thyme.dbbee.com/register/" target="_blank">Create free account</a> | <a href="http://www.dbbee.com/plans" target="_blank">Available service plans</a></p>
+			<p style="font-family:'Courier New';">Example:&#123;edbbee projectkey="29ffffffec482318be67844ae1000000...key truncated"&#125;
+			</p>
+			Joomla removes certain html tags because of security reasons, among them &lt;iframe&gt; and &lt;script&gt;. edbbee shortcode is used for embedding dbBee projects to your Joomla page or article as a script element.
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	]]></description>
+	<files>
+		<filename plugin="edbbee">edbbee.php</filename>
+	</files> 
+	<updateservers>
+        <server type="extension" priority="1" name="Plugin Update Site">http://www.dbbee.com/plugins/joomla/dbbee.xml</server>
+    </updateservers>
+	<config></config>
+</extension>
+

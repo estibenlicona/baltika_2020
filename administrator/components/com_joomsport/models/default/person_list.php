@@ -1,0 +1,176 @@
+<?php
+/*------------------------------------------------------------------------
+# JoomSport Professional 
+# ------------------------------------------------------------------------
+# BearDev development company 
+# Copyright (C) 2011 JoomSport.com. All Rights Reserved.
+# @license - http://joomsport.com/news/license.html GNU/GPL
+# Websites: http://www.JoomSport.com 
+# Technical Support:  Forum - http://joomsport.com/helpdesk/
+-------------------------------------------------------------------------*/
+// No direct access.
+defined('_JEXEC') or die;
+
+require dirname(__FILE__).'/../models.php';
+
+class person_listJSModel extends JSPRO_Models
+{
+    public $_data = null;
+    public $_lists = null;
+    public $_total = null;
+    public $season_id = null;
+
+    public $_pagination = null;
+    public $limit = null;
+    public $limitstart = null;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $mainframe = JFactory::getApplication();
+
+        // Get the pagination request variables
+        $this->limit = $mainframe->getUserStateFromRequest('global.list.limit', 'limit', $mainframe->getCfg('list_limit'), 'int');
+        $this->limitstart = 0;
+        if (!$mainframe->input->getInt('is_search')) {
+            $this->limitstart = $mainframe->getUserStateFromRequest('com_joomsport.limitstart_persons', 'limitstart', 0, 'int');
+        }
+        
+        
+        // In case limit has been changed, adjust limitstart accordingly
+        $this->limitstart = ($this->limit != 0 ? (floor($this->limitstart / $this->limit) * $this->limit) : 0);
+        if ($this->getTotal() <= $this->limitstart) {
+            $this->limitstart = 0;
+        }
+        $this->getPagination();
+
+        $this->getData();
+
+        $query = 'SELECT DISTINCT (p.id)
+					FROM #__bl_persons AS p';
+        $this->db->setQuery($query);
+        $this->_lists['totplayer'] = $this->db->loadResult();
+    }
+
+    public function getData()
+    {
+        if (empty($this->_data)) {
+            $query = $this->_buildQuery();
+            $this->_data = $this->_getList($query);
+            $error = $this->db->getErrorMsg();
+            if ($error) {
+                return JError::raiseError(500, $error);
+            }
+        }
+
+        return $this->_data;
+    }
+
+    public function getTotal()
+    {
+        if (empty($this->_total)) {
+            $query = $this->_buildQuery();
+            $this->_total = $this->_getListCount($query);
+        }
+
+        return $this->_total;
+    }
+    public function _getListCount($query)
+    {
+        $this->db->setQuery($query);
+        $tot = $this->db->loadObjectList();
+
+        return count($tot);
+    }
+
+    public function _getList($query)
+    {
+        $this->db->setQuery($query, $this->limitstart, $this->limit);
+        $tot = $this->db->loadObjectList();
+
+        return $tot;
+    }
+
+    public function getPagination()
+    {
+        if (empty($this->_pagination)) {
+            jimport('joomla.html.pagination');
+            $this->_pagination = new JPagination($this->getTotal(), $this->limitstart, $this->limit);
+        }
+
+        return $this->_pagination;
+    }
+
+    public function _buildQuery()
+    {
+        $orderby = $this->_buildContentOrderBy();
+        $mainframe = JFactory::getApplication();
+
+        $this->_lists['js_filter_search'] = $mainframe->getUserStateFromRequest('com_joomsport.person_list_filter', 'js_filter_search', '', 'string');
+
+            $query = "
+					SELECT DISTINCT (
+					p.id
+					), p . * , c.name
+					FROM #__bl_persons AS p
+					LEFT JOIN #__bl_persons_category AS c ON c.id = p.category_id
+					";
+            
+            if ($this->_lists['js_filter_search']) {
+                $query .= " AND (p.first_name LIKE '%".($this->_lists['js_filter_search'])."%' OR p.last_name LIKE '%".($this->_lists['js_filter_search'])."%' OR c.name LIKE '%".($this->_lists['js_filter_search'])."%')";
+            }
+
+            $query .= ' GROUP BY p.id ';
+        
+
+        $query .= $orderby;
+
+        return $query;
+    }
+
+    public function _buildContentOrderBy()
+    {
+        $mainframe = JFactory::getApplication();
+
+        $this->_lists['sortfield'] = $mainframe->getUserStateFromRequest('com_joomsport.person_list_field', 'sortfield', 'first_name', 'string');
+        $this->_lists['sortway'] = $mainframe->getUserStateFromRequest('com_joomsport.person_list_way', 'sortway', 'ASC', 'string');
+
+        $sort = ($this->_lists['sortfield'] == 'first_name') ? 'first_name '.$this->_lists['sortway'].',last_name '.$this->_lists['sortway'] : ($this->_lists['sortfield'].' '.$this->_lists['sortway']);
+
+        $orderby = ' ORDER BY '.$sort;
+
+        return $orderby;
+    }
+
+    
+    //
+    public function delPerson($cid)
+    {
+        if (!JFactory::getUser()->authorise('core.delete', 'com_joomsport')) {
+            return JError::raiseError(303, '');
+        }
+        if (count($cid)) {
+            $cids = implode(',', $cid);
+            $query = 'DELETE FROM `#__bl_persons` WHERE id IN ('.$cids.')';
+            $this->db->setQuery($query);
+            $this->db->query();
+
+            $query = 'DELETE p,ap FROM #__bl_photos as p, #__bl_assign_photos as ap WHERE ap.cat_id IN ('.$cids.') AND p.id = ap.photo_id  AND ap.cat_type = 6';
+            $this->db->setQuery($query);
+            $this->db->query();
+
+
+            $query = 'SELECT id FROM `#__bl_extra_filds` WHERE type = 6';
+            $this->db->setQuery($query);
+            $fid = $this->db->loadColumn();
+            if (count($fid)) {
+                $fids = implode(',', $fid);
+                $query = 'DELETE FROM `#__bl_extra_values` WHERE uid IN ('.$cids.') AND f_id IN ('.$fids.')';
+                $this->db->setQuery($query);
+                $this->db->query();
+            }
+            
+        }
+    }
+}

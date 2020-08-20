@@ -1,0 +1,59 @@
+#phocagallery .glyphicon-folder-close {color: #f5b800;}
+#phocagallery .glyphicon-folder-open {color: #f5b800;}
+#phocagallery .glyphicon-zoom-in {color: #B88A00;}
+#phocagallery .glyphicon-download-alt {color: #009966;}
+#phocagallery .glyphicon-globe {color: #66cc99;}
+#phocagallery .glyphicon-comment {color: #33ccff;}
+#phocagallery .glyphicon-upload {color: #ff9900;}
+#phocagallery .glyphicon-star {color: #ffff00;}
+#phocagallery .glyphicon-camera {color: #3380cc;}
+#phocagallery .glyphicon-trash {color: #ff3333;}
+#phocagallery .glyphicon-unpublish {color: #ff3333;}
+#phocagallery .glyphicon-publish {color: #00d600;}
+#phocagallery .glyphicon-calendar {color: #cc0000;}
+#phocagallery .glyphicon-stats {color: #3399ff;}
+#phocagallery .glyphicon-minus-sign {color: #ff3333;}
+#phocagallery .glyphicon-picture {color: #3399ff;}
+#phocagallery .glyphicon-ok {color: #00d600;}
+#phocagallery .glyphicon-user {color: #0000b9;}
+#phocagallery .glyphicon-save {color: #00d600;}
+
+
+#phocagallery .ph-icon-animated {color: #ff6633;}
+#phocagallery .ph-icon-fb {color: #3b5998;}
+
+.pg-cv-box .glyphicon {
+	font-size: 130%;
+}
+
+.pg-cv-box-mod-ri,
+.pg-cv-box,
+.pg-csv-box {
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 0px;
+	box-shadow: 1px 1px 2px 1px rgba(190, 190, 190, 0.5), 0 0 7px 7px rgba(240, 240, 240, 0.2) inset;
+	padding:0px;
+}
+
+
+.pg-cv-box .pg-box-img-bottom,
+.pg-csv-box .pg-box-img-bottom {
+	margin:0px 10px 5px 10px;
+}
+.pg-csv-box .pg-csv-name,
+.pg-csv-box .pg-csv-name-i {
+	margin-top:10px;
+}
+
+.pg-cv-box:hover,
+.pg-csv-box:hover {
+	border-radius: 0px;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+}
+.pg-csv-name-i {
+	margin-top: 5px;
+} 
+
+

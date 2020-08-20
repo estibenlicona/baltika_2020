@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+    <name>FW Gallery Light</name>
+    <creationDate>26 Jun 2018</creationDate>
+    <author>Fastw3b - Websites &amp; Mobile Apps</author>
+    <authorEmail>manager@fastw3b.net</authorEmail>
+    <authorUrl>http://www.fastw3b.net</authorUrl>
+    <copyright>Copyright (C) 2017 Fastw3b. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>4.3.2</version>
+    <description><![CDATA[
+<p><img alt="Thank you for your business with Fastw3b!" src="components/com_fwgallerylight/assets/images/fw_thankyou_install.png" /></p>
+<p>&nbsp;</p>
+<p><strong style="font-size:125%;color:#019620;text-transform:uppercase;">Congratulations! Component has been successfully installed on your website.</strong>
+<br/>Thank you for your choice! Enjoy using our extensions and get in touch to let us know your feedback.</p>
+<p>&nbsp;</p>
+<img style="margin: 0 30px 15px 0; float: left;" src="components/com_fwgallerylight/assets/images/fw_gallery_light.png" />
+<p><strong>FW Gallery Light</strong></p>
+<div><strong>Current component version:</strong> 4.3.2</div>
+    <div><strong>Release date:</strong> 26 Jun 2018</div>
+<div><strong>Tested on</strong>: Joomla 3.7.3</div>
+<div><strong>License</strong>: <a href="https://www.gnu.org/licenses/" target="_blank">GPLv3</a></div>
+<p>&nbsp;</p>
+<p>Beautiful and simple Joomla gallery extension with responsive design and social sharing options.</p>
+<div style="clear:both;"></div>
+<p><strong>What to do next</strong></p>
+<ol>
+<li>Check Configuration section to make sure settings match your desired configuration.</li>
+<li>Create a gallery in Galleries section.</li>
+<li>Add images to a gallery in Images section.</li>
+<li>Add a menu item with one of the gallery layouts to view gallery on front-end.</li>
+<li>Check documentation in <a href="http://fastw3b.net/client-section?layout=extensions" target="_blank">My Extensions section of Fastw3b</a> website if you couldn't get it to work.</li>
+<li><a href="http://fastw3b.net/client-section?layout=support" target="_blank">Suggest your idea here</a> if you feel like plugin usage can be simplified or better explained.</li>
+<li><a href="http://fastw3b.net/client-section?layout=support" target="_blank">Report a bug here</a> if you think something must be working and it doesn't.</li>
+<li><a href="https://extensions.joomla.org/extensions/extension/photos-a-images/galleries/fw-gallery
+" target="_blank">Leave a positive review on JED</a> if your experience was pleasant and you want to share it with others.</li>
+</ol>
+<p><strong>Useful links</strong></p>
+<div><img src="components/com_fwgallerylight/assets/images/bullet-green.png" style="margin-right: 5px; vertical-align: bottom;" /><a href="https://fastw3b.net/joomla-extensions/gallery" title="Joomla Gallery Page" target="_blank">FW Gallery page</a> on fastw3b.net.</div>
+<div><img src="components/com_fwgallerylight/assets/images/bullet-green.png" style="margin-right: 5px; vertical-align: bottom;" />Fastw3b <a href="http://fastw3b.net/client-section" title="Fasw3b Profile Page" target="_blank">Profile page</a> - check your membership status and billing info.</div>
+<div><img src="components/com_fwgallerylight/assets/images/bullet-green.png" style="margin-right: 5px; vertical-align: bottom;" /><a href="http://fastw3b.net/client-section?view=user&layout=transactions&id=8" title="Transactions Page" target="_blank">Transactions page</a> - check current status of your recent transactions.</div>
+<div><img src="components/com_fwgallerylight/assets/images/bullet-green.png" style="margin-right: 5px; vertical-align: bottom;" />Follow us on Twitter and Facebook to know latest news and updates.</div>
+<p>&nbsp;</p>
+<p>Thanks for using our extensions and services!<br />Copyright &copy; 2007 - 2017 <a href="http://fastw3b.net" targent="_blank">Fastw3b</a>.</p>
+]]></description>
+    <install type="component">
+        <sql>
+            <file driver="mysql" charset="utf8">install.sql</file>
+        </sql>
+    </install>
+    <scriptfile>install.script.php</scriptfile>
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>fwgallerylight.php</filename>
+        <filename>router.php</filename>
+        <folder>assets</folder>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+	<languages folder="site/language">
+        <language tag="de-DE">de-DE/de-DE.com_fwgallerylight.ini</language>
+        <language tag="el-GR">el-GR/el-GR.com_fwgallerylight.ini</language>
+        <language tag="en-GB">en-GB/en-GB.com_fwgallerylight.ini</language>
+        <language tag="es-ES">es-ES/es-ES.com_fwgallerylight.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.com_fwgallerylight.ini</language>
+        <language tag="it-IT">it-IT/it-IT.com_fwgallerylight.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.com_fwgallerylight.ini</language>
+        <language tag="uk-UA">uk-UA/uk-UA.com_fwgallerylight.ini</language>
+	</languages>
+    <administration>
+        <menu img="components/com_fwgallerylight/assets/images/fwgalleryicon.png">FW Gallery Light</menu>
+        <submenu>
+            <menu img="components/com_fwgallerylight/assets/images/galleries.png" view="fwgallerylight">Galleries</menu>
+            <menu img="components/com_fwgallerylight/assets/images/images.png" view="files">Images</menu>
+            <menu img="components/com_fwgallerylight/assets/images/fwconfig.png" view="config">Config</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>install.script.php</filename>
+            <filename>install.sql</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>fwgallerylight.php</filename>
+            <folder>assets</folder>
+            <folder>elements16</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="de-DE">de-DE/de-DE.com_fwgallerylight.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_fwgallerylight.sys.ini</language>
+            <language tag="el-GR">el-GR/el-GR.com_fwgallerylight.ini</language>
+            <language tag="el-GR">el-GR/el-GR.com_fwgallerylight.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_fwgallerylight.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_fwgallerylight.sys.ini</language>
+            <language tag="es-ES">es-ES/es-ES.com_fwgallerylight.ini</language>
+            <language tag="es-ES">es-ES/es-ES.com_fwgallerylight.sys.ini</language>
+            <language tag="fr-FR">fr-FR/fr-FR.com_fwgallerylight.ini</language>
+            <language tag="fr-FR">fr-FR/fr-FR.com_fwgallerylight.sys.ini</language>
+            <language tag="it-IT">it-IT/it-IT.com_fwgallerylight.ini</language>
+            <language tag="it-IT">it-IT/it-IT.com_fwgallerylight.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_fwgallerylight.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_fwgallerylight.sys.ini</language>
+            <language tag="uk-UA">uk-UA/uk-UA.com_fwgallerylight.ini</language>
+            <language tag="uk-UA">uk-UA/uk-UA.com_fwgallerylight.sys.ini</language>
+        </languages>
+    </administration>
+	<updateservers>
+		<server type="extension" priority="1" name="FW Gallery Light"><![CDATA[http://fastw3b.net/index.php?option=com_fwsales&view=updates&layout=update&format=raw&package=Gallery+Light&dummy=extension.xml]]></server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="ordering_galleries" type="text" default="name" label="" description="" />
+				<field name="ordering_images" type="text" default="new" label="" description="" />
+				<field name="use_watermark" type="text" default="0" label="" description="" />
+				<field name="watermark_file" type="text" default="" label="" description="" />
+				<field name="galleries_a_row" type="text" default="3" label="" description="" />
+				<field name="images_a_row" type="text" default="3" label="" description="" />
+				<field name="galleries_rows" type="text" default="4" label="" description="" />
+				<field name="images_rows" type="text" default="4" label="" description="" />
+				<field name="display_total_galleries" type="text" default="1" label="" description="" />
+				<field name="display_owner_gallery" type="text" default="1" label="" description="" />
+				<field name="display_owner_image" type="text" default="1" label="" description="" />
+				<field name="display_date_gallery" type="text" default="1" label="" description="" />
+				<field name="display_gallery_sorting" type="text" default="1" label="" description="" />
+				<field name="display_name_gallery" type="text" default="1" label="" description="" />
+				<field name="display_name_image" type="text" default="1" label="" description="" />
+				<field name="display_date_image" type="text" default="1" label="" description="" />
+				<field name="display_user_copyright" type="text" default="1" label="" description="" />
+				<field name="date_format" type="text" default="F d, Y" label="" description="" />
+				<field name="new_days" type="text" default="7" label="" description="" />
+				<field name="hide_fw_copyright" type="text" default="0" label="" description="" />
+				<field name="im_just_shrink" type="text" default="0" label="" description="" />
+				<field name="watermark_position" type="text" default="left bottom" label="" description="" />
+				<field name="watermark_text" type="text" default="" label="" description="" />
+				<field name="allow_print_button" type="text" default="1" label="" description="" />
+				<field name="hide_bottom_image" type="text" default="0" label="" description="" />
+				<field name="hide_mignifier" type="text" default="0" label="" description="" />
+				<field name="hide_single_image_view" type="text" default="0" label="" description="" />
+				<field name="lightbox_size" type="text" default="90" label="" description="" />
+				<field name="allow_frontend_galleries_management" type="text" default="1" label="" description="" />
+				<field name="display_galleries_lightbox" type="text" default="0" label="" description="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

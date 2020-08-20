@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+<name>PopUp Aholic</name>
+<creationDate>November 2016</creationDate>
+<version>1.3.1</version>
+<author>GraphicAholic</author>
+<copyright>Copyright 2016 - graphicaholic.com</copyright>
+<license>http://www.gnu.org/copyleft/lgpl.html</license>
+<authorEmail>support@graphicaholic.com</authorEmail>
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>	
+	<description>PopUp Aholic is a full featured FREE Joomla 3.x popup model box module.</description>	
+	<customContent />	
+	<files>	
+		<filename module="mod_popupaholic">mod_popupaholic.php</filename>
+        <folder>js</folder>
+        <folder>css</folder>	
+        <folder>tmpl</folder>
+		<folder>fields</folder>
+        <folder>images</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_popupaholic.xml</filename>
+	</files>	
+	<updateservers>	
+		<server type="extension" priority="1" name="PopUpAholic Update">http://www.graphicaholic.com/downloads/popupaholic/popupaholic.xml</server>	
+	</updateservers>	
+	<config>	
+	<fields name="params" addfieldpath="/modules/mod_popupaholic/fields">	
+	<!-- General Settings -->	
+	<fieldset name="basic">
+	<field type="spacer" name="popupaholicspacer1" label="" />
+	<field name="autoResponsive" type="list" default="false" label="Responsive or Static Box" description="Responsive setting will size popup box according to your screen size or width and height settings within your display code. Static setting will give you the option to manually set your width and height.">
+			<option value="true">Responsive Box</option>
+			<option value="false">Static Box</option>
+		</field>
+	<field name="boxWidth" showon="autoResponsive:false" type="text" default="600" label="Set Width of Static Box" description="Set width of Static Box" />
+	<field name="boxHeight" showon="autoResponsive:false" type="text" default="600" label="Set Height of Static Box" description="Set height of Static Box" />
+	<field name="boxTimer" type="text" default="10" label="Set Box Timer in Seconds" description="Set how long in seconds your popup box will display." />
+    <field name="cookieExpire" type="list" default="noCookie" label="Cookies expire in" description="Day(s)=Total Number of days before cookie expires. Hours(s)=Number of hours (24 hour clock) before cookie expires. Minutes(s)=Number of minutes (1 minimum to 60 maximum before cookie expires.)">
+			<option value="noCookie">No cookie session</option>
+            <option value="inDays">Day(s)</option>
+			<option value="inHours">Hour(s)</option>
+            <option value="inMinutes">Minute(s)</option>
+		</field>
+    <field name="cookieTime" showon="cookieExpire:inDays,inHours,inMinutes" type="text" default="15" label="Set Cookie Time" description="Set cookie time based on above setting." />
+	<field name="setDelay" type="list" default="0" label="Delay Popup on Page Load" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+		<field name="setDelayValue" showon="setDelay:1" type="text" default="1" label="Delay Popup in Seconds" description="Set amount of delay time in seconds between page load and popup load." />
+	<field name="boxSelection" type="list" default="1" label="Get box data from" description="">
+					<option value="1">Above Custom HTML</option>
+					<option value="2">External file</option>
+				</field>	
+	<field name="boxFile" showon="boxSelection:2" type="url" default="http://" label="External file path" description="Type in the absolute path of the file you wish to display in your popup box. This can be any on or off server text, HTML, image, video file" />
+	</fieldset>	
+	<!-- Style Settings -->
+	<fieldset name="styles" group="styles" label="PopUp Box Styles">	
+	<field name="closeButton" type="list" default="1" label="Show Close Button?" description="Choose to display the close button.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>	
+	<field name="closeOnlyX" type="list" default="true" label="Close popup box only with X?" description="If you choose Yes, PopUpAholic will only close when the X button is clicked while active.">
+			<option value="false">Yes</option>
+			<option value="true">No</option>
+		</field>	
+	<field name="effectsIn" type="list" default="none" label="Popup Load Effect" description="Choose your effects on popup box load.">
+			<option value="none">None</option>
+			<option value="fade">Fade</option>
+			<option value="elastic">Elastic</option>	
+		</field>
+	<field name="effectsOut" type="list" default="none" label="Popup Exit Effect" description="Choose your effects on popup box exit">
+			<option value="none">None</option>
+			<option value="fade">Fade</option>
+			<option value="elastic">Elastic</option>	
+		</field>
+        
+    <field name="effectSpeed" type="text" default="250" label="Popup Load/Exit speed" description="Adjust to your specific needs. Lower value will speed-up effect and higher value will slow-down effect." />
+        
+	<field name="backgroundOverlay" type="truecolors" default="rgb(0,0,0,1)" label="Background Overlay Color" format="rgb" opacity="1.0" description="Choose your background overlay color." />	
+	<field name="boxBackground" type="truecolors" default="rgb(255,255,255,1)" label="Box Background Color" format="rgb" opacity="1.0" description="Choose your box background color." />	
+	<field name="boxFont" type="truecolors" default="rgb(0,0,0,1)" label="Box Text Color" format="rgb" opacity="1.0" description="Choose your font color." />
+	<field name="boxRadius" type="text" default="0" label="Box Radius" description="Choose your box radius effect. Value will be rendered in pixels. Do not include px after value." />
+	<field name="boxBorder" type="list" default="0" label="Box Border" description="Show a box border?">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+	<field name="borderSize" showon="boxBorder:1" type="text" default="0" label="Border Thickness" description="Choose box border thickness. Value will be rendered in pixels. Do not include px after value." />	
+	<field name="borderColor" showon="boxBorder:1" type="truecolors" default="rgb(0,0,0,1)" label="Border Color" format="rgb" opacity="1.0" description="Choose box border color." />	
+	<field name="borderType" showon="boxBorder:1" type="list" default="solid" label="Border Type" description="Choose the box border style you wish to display.">	
+			<option value="solid">Solid</option>	
+			<option value="dotted">Dotted</option>	
+			<option value="dashed">Dashed</option>	
+			<option value="double">Double</option>	
+			<option value="groved">Groved</option>	
+			<option value="ridge">Ridge</option>	
+			<option value="inset">Inset</option>	
+			<option value="outset">Outset</option>	
+		</field>
+	<field name="boxShadow" type="list" default="0" label="Box Shadow Effect" description="Show a box shadow effect?">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>	
+	<field name="boxShadowOpacity" showon="boxShadow:1" type="truecolors" default="rgb(0,0,0,1)" label="Box Shadow Color" format="rgb" opacity="1.0" description="Choose box shadow color and opacity." />	
+	<field name="4cornerMargin" type="text" default="20" label="Four Corner Padding" description="Value will be rendered in pixels. Do not include px after value." />	
+	</fieldset>	
+	<!-- Advanced Settings -->
+	<fieldset name="advanced" group="advanced">	
+				<field name="loadScripts" type="list" default="1" label="Load script files inline?" description="By selecting Yes, you are allowing PopUp Aholic to load it's supporting script files in between the body tags and not in the head tags, where they properly belong. This option is available because other installed extension(s) on your site or your template are improperly loading the jQuery Library script.">
+					<option value="1">JNO</option>
+					<option value="2">JYES</option>
+				</field>
+				<field name="loadjQuery" showon="loadScripts:2" type="radio" class="btn-group" default="0" label="Load jQuery Library?" description="By selecting Yes, you are allowing PopUp Aholic to load the jQuery Library script inline. This option was added to combat other Joomla! template or extension developers who choose not to follow the Joomla! 3.x guidelines on properly handling the jQuery Library script load. Having to add this option angers me greatly because NOW this extension is not following the Joomla! 3.x jQuery Library guidelines. By setting this option to 'Yes' just to get PopUp Aholic to work is just wrong! However, because other Joomla! extension or template developers choose not to follow these quidelines, I must fight fire with fire... Please adjust this setting at your own risk!">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+				<field name="cache" type="radio" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+				<field name="documentation" type="docs" default="900" label="" description="" />
+	</fieldset>	
+</fields>
+</config>
+</extension>

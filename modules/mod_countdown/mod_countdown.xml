@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>MOD_COUNTDOWN</name>
+	<author>Web357 (Yiannis Christodoulou)</author>
+	<creationDate>02 Sep 2018</creationDate>
+	<copyright>Copyright (C) 2009-2019 Web357. All rights reserved.</copyright>
+	<license>GNU/GPLv3, http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@web357.com</authorEmail>
+	<authorUrl>https://www.web357.com/</authorUrl>
+	<version>3.2.1</version>
+	<description>A simple Joomla! module that counts down the time until one or multiple events is scheduled to commence. It can also be used as a countdown for the release of a new website that is currently under construction.</description>
+
+	<files>
+		<folder>elements</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_countdown">mod_countdown.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>script.install.helper.php</filename>
+	</files>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<config>
+	
+		<fields name="params">
+
+			<fieldset name="basic">
+
+				<!-- BEGIN: Version Check -->
+				<field type="header" label="W357FRM_HEADER_VERSION_CHECK" />
+				<field name="info" id="info" type="info" extension_type="module" extension_name="mod_countdown" real_name="MOD_COUNTDOWN" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Version Check -->
+
+				<!-- BEGIN: Check if Web357 Framework plugin exists -->
+				<field name="w357frmrk" id="w357frmrk" type="w357frmrk" addfieldpath="/modules/mod_countdown/elements" />
+				<!-- END: Check if Web357 Framework plugin exists -->
+				
+				<field type="header" label="W357FRM_HEADER_PARAMETERS" />
+				<field name="date" type="calendar" default="14-06-2018" label="MOD_COUNTDOWN_DATE_LBL" description="MOD_COUNTDOWN_DATE_DESC" format="%d-%m-%Y" />
+				<field name="time" type="text" default="15:00" label="MOD_COUNTDOWN_TIME_LBL" description="MOD_COUNTDOWN_TIME_DESC" />
+				<field name="fronttext" type="textarea" rows="3" cols="25" filter="raw" default="The FIFA World Cup 2018 in Russia will start in" size="60" label="MOD_COUNTDOWN_FRONT_TEXT_LBL" description="MOD_COUNTDOWN_FRONT_TEXT_DESC" />
+				<field name="endtext" type="textarea" rows="3" cols="25" filter="raw" default=". Stay tunned!" size="60" label="MOD_COUNTDOWN_END_TEXT_LBL" description="MOD_COUNTDOWN_END_TEXT_DESC" />
+				<field name="finish" type="textarea" rows="3" cols="25" filter="raw" default="The FIFA World Cup 2018 in Russia has been started!" size="60" label="MOD_COUNTDOWN_FINISH_TEXT_LBL" description="MOD_COUNTDOWN_FINISH_TEXT_DESC" />
+				
+				<!-- BEGIN: JED Review -->
+				<field name="jedreview" id="jedreview" type="jedreview" extension_type="component" extension_name="mod_countdown" real_name="MOD_COUNTDOWN" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: JED Review -->
+				
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+
+			<fieldset name="description" label="W357FRM_HEADER_DESCRIPTION">
+
+				<!-- BEGIN: Description -->
+				<field type="header" label="W357FRM_HEADER_DESCRIPTION" />
+				<field name="description" id="description" type="description" extension_type="module" extension_name="mod_countdown" real_name="MOD_COUNTDOWN" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Description -->
+
+				<!-- BEGIN: Version Check -->
+				<field type="header" label="W357FRM_HEADER_VERSION_CHECK" />
+				<field name="info" id="info" type="info" extension_type="module" extension_name="mod_countdown" real_name="MOD_COUNTDOWN" plugin_type="" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Version Check -->
+			
+			</fieldset>
+			
+			<fieldset name="about" label="W357FRM_HEADER_ABOUT_WEB357">
+				
+				<!-- BEGIN: About Web357 -->
+				<field type="header" label="W357FRM_HEADER_ABOUT_WEB357" />
+				<field name="about" id="about" type="about" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: About Web357 -->
+				
+			</fieldset>
+			
+		</fields>	
+	</config>
+	
+    <updateservers><server type="extension" priority="1" name="Countdown (free version)"><![CDATA[https://updates.web357.com/countdown/countdown_free.xml]]></server></updateservers>
+
+</extension>

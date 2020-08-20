@@ -1,0 +1,208 @@
+a {
+  color: #ffa800;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover {
+  background: #ffa800;
+}
+#sp-bottom2 span,
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  color: #ffa800;
+}
+#offcanvas-toggler >i:hover {
+  color: #ffa800;
+}
+.btn-primary,
+.sppb-btn-primary {
+  border-color: #0faae4;
+  background-color: #ffa800;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  border-color: #0d8ab9;
+  background-color: #0e9cd1;
+}
+.social-links>a,
+ul.social-icons >li a:hover {
+  color: #ffa800;
+}
+.sp-page-title {
+  background: #ffa800;
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+
+.sp-module ul >li >a:hover {
+  color: #ffa800;
+}
+.sp-module .letestnews >div >a {
+  color: #000000;
+}
+.sp-module .letestnews >div >a:hover {
+  color: #ffa800;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #ffa800;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  background: #ffa800;
+}
+.search .btn-toolbar button {
+  background: #ffa800;
+}
+.post-formet {
+  background: #ffa800;
+}
+.voting-symbol span.star.active:before {
+  color: #ffa800;
+}
+.sp-reting span.star:hover:before,
+.sp-reting span.star:hover ~ span.star:before {
+  color: #0e9cd1;
+}
+.entry-link,
+.entry-quote {
+  background: #ffa800;
+}
+.lt-team-item,
+blockquote {
+  border-color: #ffa800;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #ffa800;
+}
+.sp-comingsoon body {
+  background-color: #ffa800;
+}
+.paginetion>li>a,
+.paginetion>li>span {
+  color: #000000;
+}
+.paginetion>li>a:hover,
+.paginetion>li>a:focus,
+.paginetion>li>span:hover,
+.paginetion>li>span:focus {
+  color: #000000;
+}
+.paginetion>.active>a,
+.paginetion>.active>span {
+  border-color: #ffa800;
+  background-color: #ffa800;
+}
+.paginetion>.active>a:hover,
+.paginetion>.active>a:focus,
+.paginetion>.active>span:hover,
+.paginetion>.active>span:focus {
+  border-color: #ffa800;
+  background-color: #ffa800;
+}
+
+.lt-slider .tp-caption a,
+.lt-intro-item:hover i,
+.lt-felture-item:hover i,
+.lt-portfolio-button:hover,
+.lt-action-button:hover,
+.lt-table-item:hover button,
+#lt-pricing .single-table:nth-child(2) {
+  background: #ffa800;
+}
+.lt-about-content-item i,
+.lt-title h2,
+.lt-intro-item i,
+.lt-felture-item h4,
+.lt-table-item h3,
+.lt-service-item h4,
+.lt-service-item i,
+.lt-table-item .table-price .price,
+.lt-table-item button:hover a,
+.lt-testimonial p.qx-designltion,
+.lt-testimonial button {
+  color: #ffa800; 
+}
+.lt-felture-item:hover i,
+.lt-portfolio-button:hover,
+.lt-action-button:hover,
+.lt-table-item:hover,
+.lt-service-item .button-service,
+.lt-table-item button,
+.lt-subscribe-content table .button:hover {
+  border-color: #ffa800;
+}
+/* Important */
+.lt-slider .tp-caption  b,
+.lt-team-item:hover p,
+.lt-about h4,
+.lt-title h6,
+.lt-title-1 h6,
+.lt-service-item:hover h3,
+.lt-feature-item i,
+.lt-about-content i,
+.lt-video-item i,
+.lt-title h4,
+.pagination>li>a,
+#sp-bottom3 .sp-module ul >li >a:hover,
+#sp-bottom4 .sp-module ul >li >a:hover,
+.pagination>li>a:hover,
+.tp-caption.excerpt, .excerpt,
+.lt-team-item .qx-person-position,
+.lt-about h5,
+.lt-blog div.k2ItemsBlock ul li a,
+.lt-services-item:hover i,
+.lt-services-item:hover h4 {
+  color: #ffa800!important; 
+}
+.lt-contact #sp-quickcontact-form .button:hover,
+.projects-filter a.selected,
+ .lt-why-chose-item i,
+ .lt-counter,
+.qx-btn:hover,
+ #lt-testimonial .button:hover,
+ #lt-feature .lt-button:hover,
+.lt-service-item .button-service,
+ .lt-pricing-item .table-footer,
+ .lt-pricing-item .table-heading,
+ .lt-we-do-item .qx-progress-bar,
+ .lt-allowing,
+.sp-megamenu-parent >li.active, 
+.sp-megamenu-parent >li:hover, 
+.lt-we-do-item i,
+.lt-table-soccer,
+#j2store-slider-range .ui-slider-handle,
+#sp-footer,
+.lt-contact-item:hover i,
+.lt-contact-form button,
+.lt-subscribe-content table .button:hover {
+  background: #ffa800!important;  
+}
+#lt-contact,
+#lt-story,
+#lt-feature,
+#lt-match,
+.projects-filter a:hover,
+.btn-success,
+.header,
+.project-wrapper .btn-go-back,
+.pagination>.active>a, 
+#j2store-slider-range .ui-slider-range {
+  background-color:#ffa800!important;  
+}
+
+#lt-pricing .single-table,
+.lt-contact #sp-quickcontact-form .button:hover,
+.lt-service-item:hover,
+.lt-contact-item i,
+.lt-table-soccer,
+.qx-btn:hover, 
+.btn-success,
+.j2store-product-module .j2store,
+.pagination>.active>a,
+.lt-team-item img,
+.lt-counter-item:hover,
+.lt-we-do-item i {
+  border-color: #ffa800!important; 
+}
+.projects-wrapper .project-img .project-img-extra {
+    background-image: -webkit-linear-gradient(top , #ffa8009e 0%, #ffa80099 100%)!important;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Galleries Layout">
+		<message>
+			Galleries Layout
+		</message>
+	</layout>
+	<state>
+		<name>Galleries Layout</name>
+		<description>Galleries Layout</description>
+	</state>
+	<fields name="params">
+		<fieldset name="basic" addfieldpath="/administrator/components/com_fwgallerylight/elements16">
+            <field name="galleries_id" type="FWGGallery" label="Select Galleries" description="Galleries to display"/>
+			<field name="display_gallery_sorting" type="radio" label="FWG_DISPLAY_ORDER_BY_OPTION" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_total_galleries" type="radio" label="FWG_DISPLAY_TOTAL_GALLERIES_COUNTER" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_name_gallery" type="radio" label="FWG_DISPLAY_GALLERY_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_descr_gallery" type="radio" label="FWG_DISPLAY_GALLERY_DESCR" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_owner_gallery" type="radio" label="FWG_DISPLAY_GALLERY_OWNER_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_date_gallery" type="radio" label="FWG_DISPLAY_GALLERY_DATE" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="galleries_a_row" type="list" label="FWG_GALLERIES_IN_A_ROW" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

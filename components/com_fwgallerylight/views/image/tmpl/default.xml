@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Single Item Layout">
+		<message>
+			Single Item Layout
+		</message>
+	</layout>
+	<state>
+		<name>Single Item Layout</name>
+		<description>Single Item Layout</description>
+	</state>
+	<fields name="params">
+		<fieldset name="basic">
+            <field name="id" type="sql" query="SELECT id, name FROM #__fwg_files WHERE published=1 ORDER BY ordering" label="FWG_SELECT_IMAGE" description="" key_field="id" value_field="name" />
+			<field name="display_name_image" type="radio" label="FWG_DISPLAY_IMAGE_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_owner_image" type="radio" label="FWG_DISPLAY_IMAGE_OWNER_NAME" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_user_copyright" type="radio" label="FWG_DISPLAY_USERS_COPYRIGHT" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_date_image" type="radio" label="FWG_DISPLAY_IMAGE_DATE" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="display_descr_image" type="radio" label="FWG_DISPLAY_IMAGE_DESCR" class="btn-group btn-group-yesno" default="def">
+				<option value="def">FWG_DEFAULT</option>
+				<option value="1">JYes</option>
+				<option value="0">JNO</option>
+			</field>
+ 		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,55 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - YJ Counter										        ||
+|| # Copyright (C) since 2007  Youjoomla.com . All Rights Reserved.     ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of Youjoomla.com                      ||
+|| # for more information visit http://www.youjoomla.com/license.html   ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses                                         ||
+|| # websites - http://www.youjoomla.com | http://www.yjsimplegrid.com  ||
+|| #################################################################### ||
+\*======================================================================*/
+.yjCounter .yjcountdown_holder {
+	overflow:hidden;
+	display:block;
+	text-align:center;
+}
+.yjCounterPretext,
+.yjCounterPosttext {
+	display:block;
+	overflow:hidden;
+	text-align:center;
+}
+.yjCounter .countdown_row {
+	clear: both;
+	width: 100%;
+	padding: 0px 2px;
+	text-align: center;
+}
+.yjCounter .countdown_section {
+	display: inline-block;
+	margin: 10px 29px 45px 10px;
+	padding: 21px 21px;
+	width: 72px;
+	height: 68px;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-border-radius:91px;
+	-khtml-border-radius:91px;
+	-moz-border-radius:91px;
+	border-radius:91px;
+}
+.yjCounter .countdown_amount {
+	font-size: 46px;
+	line-height: 46px;
+	vertical-align: baseline;
+}
+.yjCounter .countdown_descr {
+	display: block;
+	width: 100%;
+}
+.yjCounter .countdown_rtl {
+	direction: rtl;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+<name>POWr Countdown Timer</name>
+<author>POWr.io</author>
+<creationDate>Jul 2017</creationDate>
+<version>4.0</version>
+<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+<authorEmail>info@powr.io</authorEmail>
+<authorUrl>https://www.powr.io</authorUrl>
+<packagename>POWr Countdown Timer</packagename>
+<packager>POWr.io</packager>
+<packagerurl>http://www.powr.io/</packagerurl>
+<description>Create a sense of urgency to drive sales or conversions</description>
+<files folder="packages">
+  <file type="module" client="site">mod_powrcountdowntimer.zip</file>
+  <file type="plugin" group="client">plg_powrshortcodes.zip</file>
+  <file type="plugin" group="client">plg_powricon.zip</file>
+</files>
+<updateservers>
+  <server type="extension" priority="2" name="POWr Countdown Timer Updates">https://www.powr.io/joomla/update_powrcountdowntimer.xml</server>
+</updateservers>
+</extension>

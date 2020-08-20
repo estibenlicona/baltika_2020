@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>JK RESPONSIVE COUNTDOWN</name>
+  <author>Emdadul Shikder for JoomlaKave.com</author>
+  <creationDate>02-02-2015</creationDate>
+  <copyright>Copyright (C)2015 JoomlaKave.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@JoomlaKave.com</authorEmail>
+  <authorUrl>www.JoomlaKave.com</authorUrl>
+  <version>2.5</version>
+  <description>JK RC DESCRIPTION</description>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_jk_responsive_countdown.ini</language>
+	<language tag="en-GB">language/en-GB.mod_jk_responsive_countdown.sys.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_jk_responsive_countdown">mod_jk_responsive_countdown.php</filename>
+    <folder>tmpl/</folder>
+    <folder>assets/</folder>
+    <filename>index.html</filename>
+  </files>
+     <updateservers>
+        <server type="extension" priority="2" name="JK RESPONSIVE COUNTDOWN">http://joomlakave.com/updates_ex/modules/mod_jk_responsive_countdown/mod_jk_responsive_countdown_update.xml</server>
+    </updateservers>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="pre_text" type="text" default="Our next event in" label="JK_PRE_TEXT" description="JK_PRE_TEXT_DESC" />
+		<field name="pre_text_fontssd" type="text" default="22" label="JK_PRE_TEXT_FONT" description="JK_PRE_TEXT_FONT_DESC" />
+		<field name="pretexts_color" type="color" default="#555" label="Pre-Text Color" description="JK_NEWS_BGCOLOR_DESC"/>
+        <field name="date_start" type="calendar" default="12/31/2020" label="JDATE" description="" format="%m/%d/%Y" />
+        <field name="time" type="text" default="12:00 AM" label="JK_TIME" description="" />
+        <field name="day" type="text" default="Day" label="JK_DAY" description="JK_DAY_DESC" />
+		<field name="daycolor" type="color" default="#fd4239" label="JK_DAY_BGCOLOR" description="JK_NEWS_BGCOLOR_DESC"/>
+        <field name="hr" type="text" default="Hr" label="JK_HR" description="JK_HR_DESC" />
+		<field name="hrcolor" type="color" default="#490e6f" label="JK_HR_BGCOLOR" description="JK_NEWS_BGCOLOR_DESC"/>
+        <field name="min" type="text" default="Min" label="JK_MIN" description="JK_MIN_DESC" />
+		<field name="mincolor" type="color" default="#00c4df" label="JK_MIN_BGCOLOR" description="JK_NEWS_BGCOLOR_DESC"/>
+        <field name="sec" type="text" default="Sec" label="JK_SEC" description="JK_SEC_DESC" />
+		<field name="seccolor" type="color" default="#55D15D" label="JK_SEC_BGCOLOR" description="JK_NEWS_BGCOLOR_DESC"/>
+		<field name="countdown_font" type="text" default="18" label="Countdown Font Size" description="Countdown Font Size in px" />
+		<field name="background_width" type="text" default="" label="Background Width" description="Background Width in px" />
+		<field name="background_height" type="text" default="" label="Background Height" description="Background Height in px" />
+        <field name="post_text" type="text" default="" label="JK_POST_TEXT" description="JK_POST_TEXT_DESC" />
+		<field name="post_text_fontssd" type="text" default="20" label="JK_POST_TEXT_FONT" description="JK_POST_TEXT_FONT_DESC" />
+		<field name="posttext_color" type="color" default="#555" label="Post-Text Color" description="JK_NEWS_BGCOLOR_DESC"/>
+        <field name="finish_text" type="text" default="Finally we are here" label="JK_FINISH_TEXT" description="JK_FINISH_TEXT_DESC" />
+		<field name="container_width" type="text" default="40%" label="Container Width" description="Container Width in % or px" />
+		<field name="containercolor" type="color" default="#dddddd" label="Container Color" description="Container color in hex value"/>
+		<field name="show_button" type="radio" class="btn-group" default="0" label="JK_SHOW_BUTTON" description="JK_SHOW_BUTTON_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="button_text" type="text" default="" label="JK_BUTTON_TEXT" description="JK_BUTTON_TEXT_DESC" />
+        <field name="button_link" type="text" default="" label="JK_BUTTON_LINK_TEXT" description="JK_BUTTON_LINK_TEXT_DESC" />
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="moduleclass_sfx" type="text" default="" label="MODSFX" description="MODSFX_DESC" />
+        <field name="cache" type="hidden" default="0"/>
+        <field name="module_cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+          <option value="1">Use global</option>
+          <option value="0">No caching</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>
